@@ -1,6 +1,7 @@
 package com.example.apiplusrecycler
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,7 +27,10 @@ class MyAdapter(val list: ArrayList<DataModelItem>, val context: Context) :
             bodyText.text = currentItem.body
 
         }
-        holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener {
+
+            val intent = Intent(context, Activity2::class.java)
+            context.startActivity(intent)
         }
 
     }
