@@ -4,10 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 
 class MyAdapter(val list: ArrayList<DataModelItem>, val context: Context) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
@@ -23,10 +21,12 @@ class MyAdapter(val list: ArrayList<DataModelItem>, val context: Context) :
         val currentItem = list[position]
         holder.apply {
             userIdTxt.text = currentItem.id.toString()
-            idTxt.text = currentItem.id.toString()
+            idTxt.text = currentItem.userId.toString()
             titleTxt.text = currentItem.title
             bodyText.text = currentItem.body
 
+        }
+        holder.itemView.setOnClickListener{
         }
 
     }
